@@ -2,165 +2,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Charm Basket — little handmade things for big feelings."
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <title>Charm Basket — Little Things, Big Feelings</title>
 
-    <!-- GOOGLE FONTS -->
+    <meta name="description" content="Handmade charms, thoughtful gifts and tiny treasures from Charm Basket.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
 <!-- =====================================================
-     PAGE LOADER
+     PAGE GRAIN
 ===================================================== -->
 
-<div class="loader">
-
-    <div class="loader-hamster">
-        🐹
-    </div>
-
-    <div class="loader-name">
-        Charm Basket
-    </div>
-
-    <div class="loader-line">
-        <span></span>
-    </div>
-
-</div>
+<div class="grain"></div>
 
 
 <!-- =====================================================
      HAMSTER CURSOR
 ===================================================== -->
 
-<div class="hamster-cursor">
+<div class="hamster-cursor" id="hamsterCursor">
 
-    <div class="hamster-face">
-        🐹
+    <div class="hamster-shadow"></div>
+
+    <div class="hamster-body">
+
+        <div class="hamster-ear ear-left"></div>
+        <div class="hamster-ear ear-right"></div>
+
+        <div class="hamster-face">
+
+            <div class="eye eye-left"></div>
+            <div class="eye eye-right"></div>
+
+            <div class="nose"></div>
+
+            <div class="cheek cheek-left"></div>
+            <div class="cheek cheek-right"></div>
+
+            <div class="mouth"></div>
+
+        </div>
+
+        <div class="hamster-paw paw-left"></div>
+        <div class="hamster-paw paw-right"></div>
+
     </div>
 
 </div>
 
-<div class="cursor-ring"></div>
-
 
 <!-- =====================================================
-     DECORATIVE FLOATING OBJECTS
+     LOADING SCREEN
 ===================================================== -->
 
-<div class="floating-decoration deco-star">✦</div>
-<div class="floating-decoration deco-heart">♡</div>
-<div class="floating-decoration deco-dot"></div>
+<div class="loader" id="loader">
+
+    <div class="loader-logo">
+        <span>✦</span>
+        Charm Basket
+    </div>
+
+    <div class="loader-line">
+        <div></div>
+    </div>
+
+    <p>preparing something cute...</p>
+
+</div>
 
 
 <!-- =====================================================
      NAVIGATION
 ===================================================== -->
 
-<header class="navbar">
+<header class="nav">
 
     <a href="#home" class="brand">
-
         <span class="brand-star">✦</span>
-
-        <span>
-            Charm
-            <i>Basket</i>
-        </span>
-
+        <span>Charm Basket</span>
     </a>
-
 
     <nav class="desktop-nav">
 
         <a href="#shop">Shop</a>
-        <a href="#collections">Collections</a>
+        <a href="#story">Our story</a>
         <a href="#custom">Custom</a>
-        <a href="#story">Our Story</a>
+        <a href="#contact">Contact</a>
 
     </nav>
 
-
-    <div class="nav-actions">
-
-        <button
-            class="nav-instagram"
-            onclick="window.open('https://www.instagram.com/charm_basket04/', '_blank')"
-        >
-            Instagram ↗
-        </button>
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open menu"
-        >
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
-
-</header>
-
-
-<!-- =====================================================
-     MOBILE MENU
-===================================================== -->
-
-<div class="mobile-menu" id="mobileMenu">
-
-    <button class="mobile-close" id="mobileClose">
-        ×
+    <button class="bag-trigger" id="bagTrigger">
+        Bag
+        <span id="bagCount">0</span>
     </button>
 
-    <div class="mobile-menu-inner">
-
-        <p>EXPLORE</p>
-
-        <a href="#shop">Shop</a>
-        <a href="#collections">Collections</a>
-        <a href="#custom">Custom</a>
-        <a href="#story">Our Story</a>
-
-        <a
-            class="mobile-social"
-            href="https://www.instagram.com/charm_basket04/"
-            target="_blank"
-        >
-            Instagram ↗
-        </a>
-
-    </div>
-
-</div>
+</header>
 
 
 <!-- =====================================================
@@ -171,177 +117,93 @@
 
 <section class="hero" id="home">
 
+    <div class="hero-glow glow-a"></div>
+    <div class="hero-glow glow-b"></div>
 
-    <!-- LEFT -->
+    <div class="hero-copy">
 
-    <div class="hero-copy reveal">
-
-        <div class="hero-kicker">
-
-            <span class="kicker-line"></span>
-
+        <div class="tiny-label reveal">
+            <span></span>
             HANDMADE • THOUGHTFUL • YOURS
-
         </div>
 
-
-        <h1>
-
-            Little things,
-
-            <span>
-                big
-                <i>feelings.</i>
-            </span>
-
+        <h1 class="hero-title reveal">
+            Little things.
+            <br>
+            <i>Big feelings.</i>
         </h1>
 
-
-        <p class="hero-description">
-
-            Tiny treasures made to turn ordinary
-            moments into something worth keeping.
-
+        <p class="hero-subtitle reveal">
+            Tiny treasures made to make someone's
+            ordinary day feel a little more special.
         </p>
 
+        <div class="hero-actions reveal">
 
-        <div class="hero-actions">
-
-            <a
-                href="#shop"
-                class="button-primary magnetic"
-            >
+            <a href="#shop" class="button button-dark magnetic">
                 Explore the collection
-
                 <span>↗</span>
-
             </a>
 
-
-            <a
-                href="#custom"
-                class="button-link"
-            >
-                Make it personal
+            <a href="#custom" class="simple-link">
+                Create something personal
             </a>
 
         </div>
 
-
-        <div class="hero-note">
-
-            <span>✦</span>
-
+        <div class="hero-note reveal">
+            <span>♡</span>
             made with a little extra love
-
         </div>
 
     </div>
 
 
-    <!-- RIGHT 3D SCENE -->
+    <!-- 3D SCENE -->
 
-    <div class="hero-scene">
+    <div class="hero-scene" id="heroScene">
 
+        <div class="scene-orbit orbit-a"></div>
+        <div class="scene-orbit orbit-b"></div>
 
-        <div class="scene-shadow"></div>
+        <div class="floating-star star-a">✦</div>
+        <div class="floating-star star-b">✧</div>
+        <div class="floating-star star-c">♡</div>
 
+        <div class="scene-card card-back"></div>
+        <div class="scene-card card-middle"></div>
 
-        <!-- BACK CARD -->
+        <div class="gift-3d">
 
-        <div class="scene-card card-one">
+            <div class="gift-top">
 
-            <span>
-                handmade
-            </span>
+                <div class="bow bow-left"></div>
+                <div class="bow bow-right"></div>
 
-        </div>
+            </div>
 
+            <div class="gift-box">
 
-        <!-- FLOWER -->
+                <div class="gift-ribbon vertical"></div>
+                <div class="gift-ribbon horizontal"></div>
 
-        <div class="scene-flower">
-
-            <div class="flower-center"></div>
-
-            <div class="petal petal-1"></div>
-            <div class="petal petal-2"></div>
-            <div class="petal petal-3"></div>
-            <div class="petal petal-4"></div>
-            <div class="petal petal-5"></div>
-            <div class="petal petal-6"></div>
-
-        </div>
-
-
-        <!-- MAIN 3D OBJECT -->
-
-        <div class="hero-3d-object" id="heroObject">
-
-            <div class="object-ribbon ribbon-left"></div>
-            <div class="object-ribbon ribbon-right"></div>
-
-            <div class="object-body">
-
-                <div class="object-shine"></div>
-
-                <div class="object-label">
-
-                    <small>CHARM</small>
-
-                    <strong>
-                        CB
-                    </strong>
-
-                    <span>
-                        little things
-                    </span>
-
+                <div class="gift-label">
+                    <span>CB</span>
                 </div>
 
             </div>
 
-            <div class="object-string"></div>
-
         </div>
 
+        <div class="mini-charm charm-one">♡</div>
+        <div class="mini-charm charm-two">✦</div>
 
-        <!-- SMALL FLOATING OBJECTS -->
-
-        <div class="scene-bow">
-            🎀
-        </div>
-
-        <div class="scene-heart">
-            ♡
-        </div>
-
-        <div class="scene-star">
-            ✦
-        </div>
-
-
-        <!-- GLASS LABEL -->
-
-        <div class="glass-note">
-
+        <div class="scene-caption">
             <span>01</span>
-
-            <div>
-                <strong>
-                    Made for keeping.
-                </strong>
-
-                <small>
-                    handmade little joys
-                </small>
-            </div>
-
+            little treasures
         </div>
-
 
     </div>
-
 
 </section>
 
@@ -356,28 +218,21 @@
 
         <span>HANDMADE WITH LOVE</span>
         <b>✦</b>
-
-        <span>CUTE LITTLE TREASURES</span>
-        <b>♡</b>
-
-        <span>MADE JUST FOR YOU</span>
+        <span>SMALL THINGS, BIG FEELINGS</span>
         <b>✦</b>
-
-        <span>THOUGHTFUL GIFTS</span>
-        <b>♡</b>
-
+        <span>MADE TO BE GIFTED</span>
+        <b>✦</b>
+        <span>CUTE LITTLE TREASURES</span>
+        <b>✦</b>
 
         <span>HANDMADE WITH LOVE</span>
         <b>✦</b>
-
-        <span>CUTE LITTLE TREASURES</span>
-        <b>♡</b>
-
-        <span>MADE JUST FOR YOU</span>
+        <span>SMALL THINGS, BIG FEELINGS</span>
         <b>✦</b>
-
-        <span>THOUGHTFUL GIFTS</span>
-        <b>♡</b>
+        <span>MADE TO BE GIFTED</span>
+        <b>✦</b>
+        <span>CUTE LITTLE TREASURES</span>
+        <b>✦</b>
 
     </div>
 
@@ -385,40 +240,287 @@
 
 
 <!-- =====================================================
-     INTRO
+     SHOP INTRO
 ===================================================== -->
 
-<section class="intro section-padding reveal">
+<section class="shop section" id="shop">
 
-    <div class="intro-number">
-        01
-    </div>
+    <div class="section-top reveal">
 
-    <div class="intro-content">
+        <div>
 
-        <p class="section-label">
-            A LITTLE SOMETHING
-        </p>
+            <div class="tiny-label">
+                <span></span>
+                THE COLLECTION
+            </div>
 
-        <h2>
-            For the people
-            <br>
-            <i>who mean a lot.</i>
-        </h2>
+            <h2>
+                Things you'll
+                <br>
+                <i>want to keep.</i>
+            </h2>
 
-    </div>
-
-
-    <div class="intro-description">
+        </div>
 
         <p>
-            Charm Basket is a little corner for
-            thoughtful gifts, cute keepsakes and
-            handmade pieces that feel personal.
+            A little preview of the Charm Basket
+            world. More treasures can be added
+            once the full catalogue is ready.
         </p>
 
-        <a href="#shop">
-            Discover the little things →
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters reveal">
+
+        <button class="filter active" data-filter="all">
+            All
+        </button>
+
+        <button class="filter" data-filter="gifts">
+            Gifts
+        </button>
+
+        <button class="filter" data-filter="charms">
+            Charms
+        </button>
+
+        <button class="filter" data-filter="cute">
+            Cute things
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="products">
+
+
+        <!-- PRODUCT 01 -->
+
+        <article class="product reveal" data-category="charms">
+
+            <div class="product-visual visual-pink">
+
+                <span class="product-number">01</span>
+
+                <span class="product-tag">
+                    PREVIEW
+                </span>
+
+                <div class="fake-product heart-product">
+                    ♡
+                </div>
+
+                <div class="product-sparkle">✦</div>
+
+            </div>
+
+            <div class="product-details">
+
+                <div>
+                    <h3>Sweetheart Charm</h3>
+                    <p>Delicate little keepsake</p>
+                </div>
+
+                <strong>₹499</strong>
+
+            </div>
+
+            <button class="add-product"
+                    data-name="Sweetheart Charm"
+                    data-price="499">
+
+                Add to bag
+                <span>+</span>
+
+            </button>
+
+        </article>
+
+
+        <!-- PRODUCT 02 -->
+
+        <article class="product reveal" data-category="cute">
+
+            <div class="product-visual visual-lilac">
+
+                <span class="product-number">02</span>
+
+                <div class="fake-product flower-product">
+                    ✿
+                </div>
+
+                <div class="product-sparkle">✧</div>
+
+            </div>
+
+            <div class="product-details">
+
+                <div>
+                    <h3>Mini Bloom</h3>
+                    <p>A tiny handmade treasure</p>
+                </div>
+
+                <strong>₹599</strong>
+
+            </div>
+
+            <button class="add-product"
+                    data-name="Mini Bloom"
+                    data-price="599">
+
+                Add to bag
+                <span>+</span>
+
+            </button>
+
+        </article>
+
+
+        <!-- PRODUCT 03 -->
+
+        <article class="product reveal" data-category="gifts">
+
+            <div class="product-visual visual-cream">
+
+                <span class="product-number">03</span>
+
+                <span class="product-tag">
+                    FAVOURITE
+                </span>
+
+                <div class="fake-product gift-product">
+                    ♡
+                </div>
+
+                <div class="product-sparkle">✦</div>
+
+            </div>
+
+            <div class="product-details">
+
+                <div>
+                    <h3>Little Love Box</h3>
+                    <p>A curated mini gift</p>
+                </div>
+
+                <strong>₹899</strong>
+
+            </div>
+
+            <button class="add-product"
+                    data-name="Little Love Box"
+                    data-price="899">
+
+                Add to bag
+                <span>+</span>
+
+            </button>
+
+        </article>
+
+
+        <!-- PRODUCT 04 -->
+
+        <article class="product reveal" data-category="cute">
+
+            <div class="product-visual visual-peach">
+
+                <span class="product-number">04</span>
+
+                <div class="fake-product bow-product">
+                    🎀
+                </div>
+
+                <div class="product-sparkle">✧</div>
+
+            </div>
+
+            <div class="product-details">
+
+                <div>
+                    <h3>Pretty Bow</h3>
+                    <p>A sweet little accessory</p>
+                </div>
+
+                <strong>₹449</strong>
+
+            </div>
+
+            <button class="add-product"
+                    data-name="Pretty Bow"
+                    data-price="449">
+
+                Add to bag
+                <span>+</span>
+
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EDITORIAL SECTION
+===================================================== -->
+
+<section class="editorial" id="story">
+
+    <div class="editorial-image reveal">
+
+        <div class="image-glow"></div>
+
+        <div class="editorial-orb">
+
+            <span>♡</span>
+
+        </div>
+
+        <div class="floating-note">
+            made for
+            <br>
+            someone special
+        </div>
+
+    </div>
+
+
+    <div class="editorial-copy reveal">
+
+        <div class="tiny-label">
+            <span></span>
+            A LITTLE STORY
+        </div>
+
+        <h2>
+            Not just a gift.
+            <br>
+            <i>A tiny memory.</i>
+        </h2>
+
+        <p>
+            Some gifts are expensive.
+            Some gifts are unforgettable.
+            We believe the best ones are simply
+            thoughtful.
+        </p>
+
+        <p>
+            Charm Basket is imagined around those
+            little pieces that make someone stop,
+            smile and think:
+            <em>"this is so me."</em>
+        </p>
+
+        <a href="#custom" class="simple-link">
+            Make something personal →
         </a>
 
     </div>
@@ -427,441 +529,22 @@
 
 
 <!-- =====================================================
-     SHOP
+     COLLECTION ROW
 ===================================================== -->
 
-<section
-    class="shop section-padding"
-    id="shop"
->
+<section class="collections">
 
-    <div class="section-header reveal">
+    <div class="collection-heading reveal">
 
-        <div>
-
-            <p class="section-label">
-                THE COLLECTION
-            </p>
-
-            <h2>
-                Little
-                <i>treasures.</i>
-            </h2>
-
+        <div class="tiny-label">
+            <span></span>
+            FIND YOUR LITTLE SOMETHING
         </div>
-
-
-        <div class="section-side-text">
-
-            <p>
-                A preview selection of pieces
-                designed to make gifting feel
-                a little more special.
-            </p>
-
-            <span>
-                SCROLL TO EXPLORE ↓
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <!-- PINTEREST STYLE PRODUCT GRID -->
-
-    <div class="product-masonry">
-
-
-        <!-- PRODUCT 1 -->
-
-        <article
-            class="product product-large reveal"
-            data-name="Sweetheart Charm"
-            data-price="499"
-        >
-
-            <div class="product-visual visual-pink">
-
-                <span class="product-number">
-                    01
-                </span>
-
-                <span class="product-tag">
-                    NEW
-                </span>
-
-                <div class="product-object charm-object">
-
-                    <div class="tiny-bow">
-                        🎀
-                    </div>
-
-                    <span>
-                        ♡
-                    </span>
-
-                </div>
-
-                <div class="visual-caption">
-                    made with love
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div>
-
-                    <h3>
-                        Sweetheart Charm
-                    </h3>
-
-                    <p>
-                        A tiny little keepsake
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹499
-                </strong>
-
-            </div>
-
-
-            <button class="add-bag">
-                Add to bag
-            </button>
-
-        </article>
-
-
-        <!-- PRODUCT 2 -->
-
-        <article
-            class="product reveal"
-            data-name="Mini Bloom"
-            data-price="599"
-        >
-
-            <div class="product-visual visual-lilac">
-
-                <span class="product-number">
-                    02
-                </span>
-
-                <div class="product-object flower-object">
-
-                    <div class="flower-petal p1"></div>
-                    <div class="flower-petal p2"></div>
-                    <div class="flower-petal p3"></div>
-                    <div class="flower-petal p4"></div>
-                    <div class="flower-petal p5"></div>
-
-                    <div class="flower-core">
-                        ✦
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div>
-
-                    <h3>
-                        Mini Bloom
-                    </h3>
-
-                    <p>
-                        A little handmade bloom
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹599
-                </strong>
-
-            </div>
-
-
-            <button class="add-bag">
-                Add to bag
-            </button>
-
-        </article>
-
-
-        <!-- PRODUCT 3 -->
-
-        <article
-            class="product product-tall reveal"
-            data-name="Little Love Box"
-            data-price="899"
-        >
-
-            <div class="product-visual visual-cream">
-
-                <span class="product-number">
-                    03
-                </span>
-
-                <span class="product-tag">
-                    FAVOURITE
-                </span>
-
-                <div class="gift-box">
-
-                    <div class="gift-lid"></div>
-
-                    <div class="gift-base">
-
-                        <span>
-                            for you
-                        </span>
-
-                    </div>
-
-                    <div class="gift-ribbon"></div>
-
-                </div>
-
-                <div class="gift-shadow"></div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div>
-
-                    <h3>
-                        Little Love Box
-                    </h3>
-
-                    <p>
-                        A curated little surprise
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹899
-                </strong>
-
-            </div>
-
-
-            <button class="add-bag">
-                Add to bag
-            </button>
-
-        </article>
-
-
-        <!-- PRODUCT 4 -->
-
-        <article
-            class="product reveal"
-            data-name="Pretty Bow Charm"
-            data-price="449"
-        >
-
-            <div class="product-visual visual-peach">
-
-                <span class="product-number">
-                    04
-                </span>
-
-                <div class="bow-object">
-
-                    <div class="bow-loop left"></div>
-                    <div class="bow-loop right"></div>
-
-                    <div class="bow-knot"></div>
-
-                    <div class="bow-tail left-tail"></div>
-                    <div class="bow-tail right-tail"></div>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div>
-
-                    <h3>
-                        Pretty Bow Charm
-                    </h3>
-
-                    <p>
-                        Sweet & personalised
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹449
-                </strong>
-
-            </div>
-
-
-            <button class="add-bag">
-                Add to bag
-            </button>
-
-        </article>
-
-
-        <!-- PRODUCT 5 -->
-
-        <article
-            class="product reveal"
-            data-name="Tiny Keepsake"
-            data-price="549"
-        >
-
-            <div class="product-visual visual-brown">
-
-                <span class="product-number">
-                    05
-                </span>
-
-                <div class="keepsake">
-
-                    <span>
-                        yours
-                    </span>
-
-                    <strong>
-                        ♡
-                    </strong>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div>
-
-                    <h3>
-                        Tiny Keepsake
-                    </h3>
-
-                    <p>
-                        Something small, something sweet
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹549
-                </strong>
-
-            </div>
-
-
-            <button class="add-bag">
-                Add to bag
-            </button>
-
-        </article>
-
-
-        <!-- PRODUCT 6 -->
-
-        <article
-            class="product product-large reveal"
-            data-name="Sweet Gift Set"
-            data-price="999"
-        >
-
-            <div class="product-visual visual-rose">
-
-                <span class="product-number">
-                    06
-                </span>
-
-                <div class="gift-set">
-
-                    <div class="set-item item-one">
-                        ♡
-                    </div>
-
-                    <div class="set-item item-two">
-                        ✦
-                    </div>
-
-                    <div class="set-item item-three">
-                        🎀
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="product-details">
-
-                <div>
-
-                    <h3>
-                        Sweet Gift Set
-                    </h3>
-
-                    <p>
-                        A little collection of joy
-                    </p>
-
-                </div>
-
-                <strong>
-                    ₹999
-                </strong>
-
-            </div>
-
-
-            <button class="add-bag">
-                Add to bag
-            </button>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     COLLECTIONS
-===================================================== -->
-
-<section
-    class="collections"
-    id="collections"
->
-
-    <div class="collections-heading reveal">
-
-        <p class="section-label">
-            SHOP BY FEELING
-        </p>
 
         <h2>
-            Pick a little
-            <i>something.</i>
+            Pick a
+            <br>
+            <i>feeling.</i>
         </h2>
 
     </div>
@@ -869,110 +552,29 @@
 
     <div class="collection-list">
 
-
-        <a
-            href="#shop"
-            class="collection-row reveal"
-        >
-
-            <span>01</span>
-
-            <div>
-
-                <small>
-                    FOR THEM
-                </small>
-
-                <h3>
-                    Someone Special
-                </h3>
-
-            </div>
-
-            <strong>
-                ↗
-            </strong>
-
+        <a href="#shop" class="collection reveal">
+            <small>01</small>
+            <span>For someone special</span>
+            <b>↗</b>
         </a>
 
-
-        <a
-            href="#shop"
-            class="collection-row reveal"
-        >
-
-            <span>02</span>
-
-            <div>
-
-                <small>
-                    FOR YOU
-                </small>
-
-                <h3>
-                    Pretty Little Things
-                </h3>
-
-            </div>
-
-            <strong>
-                ↗
-            </strong>
-
+        <a href="#shop" class="collection reveal">
+            <small>02</small>
+            <span>Pretty little things</span>
+            <b>↗</b>
         </a>
 
-
-        <a
-            href="#shop"
-            class="collection-row reveal"
-        >
-
-            <span>03</span>
-
-            <div>
-
-                <small>
-                    HANDMADE
-                </small>
-
-                <h3>
-                    Little Treasures
-                </h3>
-
-            </div>
-
-            <strong>
-                ↗
-            </strong>
-
+        <a href="#shop" class="collection reveal">
+            <small>03</small>
+            <span>Handmade treasures</span>
+            <b>↗</b>
         </a>
 
-
-        <a
-            href="#custom"
-            class="collection-row reveal"
-        >
-
-            <span>04</span>
-
-            <div>
-
-                <small>
-                    PERSONAL
-                </small>
-
-                <h3>
-                    Made Just For You
-                </h3>
-
-            </div>
-
-            <strong>
-                ↗
-            </strong>
-
+        <a href="#custom" class="collection reveal">
+            <small>04</small>
+            <span>Made just for you</span>
+            <b>↗</b>
         </a>
-
 
     </div>
 
@@ -980,140 +582,47 @@
 
 
 <!-- =====================================================
-     CUSTOM SECTION
+     CUSTOM ORDER
 ===================================================== -->
 
-<section
-    class="custom-section section-padding"
-    id="custom"
->
+<section class="custom" id="custom">
 
-    <div class="custom-card reveal">
+    <div class="custom-inner reveal">
 
-
-        <div class="custom-orbit orbit-a"></div>
-        <div class="custom-orbit orbit-b"></div>
-
-
-        <div class="custom-copy">
-
-            <p class="section-label">
-                HAVE AN IDEA?
-            </p>
-
-            <h2>
-                Let's make
-                <br>
-                it <i>yours.</i>
-            </h2>
-
-            <p>
-                A name, colour, message or a completely
-                custom idea — tell us what you're imagining
-                and we'll turn it into something special.
-            </p>
-
-            <a
-                href="https://www.instagram.com/charm_basket04/"
-                target="_blank"
-                class="button-primary magnetic"
-            >
-                Start a conversation
-                <span>↗</span>
-            </a>
-
-        </div>
-
-
-        <div class="custom-3d">
-
-            <div class="custom-gift">
-
-                <div class="custom-gift-top"></div>
-
-                <div class="custom-gift-body">
-
-                    <div class="custom-cross one"></div>
-                    <div class="custom-cross two"></div>
-
-                </div>
-
-            </div>
-
-            <div class="custom-heart">
-                ♡
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     STORY
-===================================================== -->
-
-<section
-    class="story section-padding"
-    id="story"
->
-
-    <div class="story-visual reveal">
-
-        <div class="story-circle"></div>
-
-        <div class="story-card">
-
-            <span>
-                C
-            </span>
-
-            <small>
-                CHARM BASKET
-            </small>
-
-        </div>
-
-        <div class="story-floating">
+        <div class="custom-decoration decoration-one">
             ✦
         </div>
 
-    </div>
+        <div class="custom-decoration decoration-two">
+            ♡
+        </div>
 
-
-    <div class="story-copy reveal">
-
-        <p class="section-label">
-            OUR LITTLE WORLD
-        </p>
+        <div class="tiny-label">
+            <span></span>
+            SOMETHING PERSONAL?
+        </div>
 
         <h2>
-            Small details
+            Your idea.
             <br>
-            make the
-            <i>difference.</i>
+            <i>Our little magic.</i>
         </h2>
 
         <p>
-            There's something special about receiving
-            something that feels like it was chosen
-            just for you.
+            Have a colour, name, message or
+            completely different idea in mind?
+            Let's make something that feels
+            uniquely yours.
         </p>
 
-        <p>
-            Charm Basket is built around those little
-            moments — thoughtful gifts, cute details
-            and handmade pieces that feel personal.
-        </p>
-
-        <div class="story-signature">
-            with love,
-            <br>
-            <i>Charm Basket</i>
-        </div>
+        <a
+            href="https://www.instagram.com/charm_basket04/"
+            target="_blank"
+            class="button button-light magnetic"
+        >
+            Talk to Charm Basket
+            <span>↗</span>
+        </a>
 
     </div>
 
@@ -1121,22 +630,24 @@
 
 
 <!-- =====================================================
-     INSTAGRAM
+     INSTAGRAM PREVIEW
 ===================================================== -->
 
-<section class="instagram">
+<section class="instagram" id="contact">
 
-    <div class="instagram-heading section-padding reveal">
+    <div class="section-top reveal">
 
         <div>
 
-            <p class="section-label">
-                COME SAY HI
-            </p>
+            <div class="tiny-label">
+                <span></span>
+                FOLLOW ALONG
+            </div>
 
             <h2>
                 More little
-                <i>things.</i>
+                <br>
+                <i>moments.</i>
             </h2>
 
         </div>
@@ -1144,44 +655,44 @@
         <a
             href="https://www.instagram.com/charm_basket04/"
             target="_blank"
+            class="simple-link"
         >
-            @charm_basket04 ↗
+            @charm_basket04 →
         </a>
 
     </div>
 
 
-    <div class="insta-grid">
+    <div class="instagram-grid">
 
-        <div class="insta-card insta-a reveal">
-            <span>01</span>
-            <strong>little<br>details</strong>
-        </div>
+        <a href="https://www.instagram.com/charm_basket04/" target="_blank"
+           class="insta insta-1 reveal">
+            <span>♡</span>
+        </a>
 
-        <div class="insta-card insta-b reveal">
-            <span>02</span>
-            <strong>made<br>with love</strong>
-        </div>
+        <a href="https://www.instagram.com/charm_basket04/" target="_blank"
+           class="insta insta-2 reveal">
+            <span>✦</span>
+        </a>
 
-        <div class="insta-card insta-c reveal">
-            <span>03</span>
-            <strong>pretty<br>things</strong>
-        </div>
+        <a href="https://www.instagram.com/charm_basket04/" target="_blank"
+           class="insta insta-3 reveal">
+            <span>✿</span>
+        </a>
 
-        <div class="insta-card insta-d reveal">
-            <span>04</span>
-            <strong>for<br>you</strong>
-        </div>
+        <a href="https://www.instagram.com/charm_basket04/" target="_blank"
+           class="insta insta-4 reveal">
+            <span>✧</span>
+        </a>
 
-        <div class="insta-card insta-e reveal">
-            <span>05</span>
-            <strong>tiny<br>joys</strong>
-        </div>
+        <a href="https://www.instagram.com/charm_basket04/" target="_blank"
+           class="insta insta-5 reveal">
+            <span>♡</span>
+        </a>
 
     </div>
 
 </section>
-
 
 </main>
 
@@ -1192,23 +703,20 @@
 
 <footer>
 
-    <div class="footer-main section-padding">
+    <div class="footer-main">
 
         <div class="footer-brand">
 
-            <div class="footer-logo">
-
-                <span>✦</span>
-
-                Charm
-                <i>Basket</i>
-
+            <div class="brand">
+                <span class="brand-star">✦</span>
+                Charm Basket
             </div>
 
-            <p>
-                Little things for
-                big feelings.
-            </p>
+            <h2>
+                Little things.
+                <br>
+                <i>Big feelings.</i>
+            </h2>
 
         </div>
 
@@ -1216,31 +724,18 @@
         <div class="footer-links">
 
             <div>
-
-                <span>EXPLORE</span>
-
+                <small>Explore</small>
                 <a href="#shop">Shop</a>
-                <a href="#collections">Collections</a>
+                <a href="#story">Our story</a>
                 <a href="#custom">Custom</a>
-
             </div>
 
-
             <div>
-
-                <span>CONNECT</span>
-
-                <a
-                    href="https://www.instagram.com/charm_basket04/"
-                    target="_blank"
-                >
+                <small>Social</small>
+                <a href="https://www.instagram.com/charm_basket04/" target="_blank">
                     Instagram
                 </a>
-
-                <a href="#story">
-                    Our Story
-                </a>
-
+                <a href="#contact">Contact</a>
             </div>
 
         </div>
@@ -1248,14 +743,12 @@
     </div>
 
 
-    <div class="footer-bottom section-padding">
+    <div class="footer-bottom">
+
+        <span>© 2026 Charm Basket</span>
 
         <span>
-            © 2026 Charm Basket
-        </span>
-
-        <span>
-            made with a little magic ✦
+            Made with care ✦
         </span>
 
     </div>
@@ -1264,101 +757,58 @@
 
 
 <!-- =====================================================
-     CART DRAWER
+     BAG PANEL
 ===================================================== -->
 
-<div
-    class="cart-overlay"
-    id="cartOverlay"
->
+<div class="bag-overlay" id="bagOverlay">
 
-    <aside class="cart-drawer">
+    <aside class="bag-panel">
 
-        <button
-            class="cart-close"
-            id="cartClose"
-        >
+        <button class="bag-close" id="bagClose">
             ×
         </button>
 
-        <p class="section-label">
+        <div class="tiny-label">
+            <span></span>
             YOUR LITTLE BAG
-        </p>
+        </div>
 
         <h2>
             Your
-            <i>picks.</i>
+            <br>
+            <i>favourites.</i>
         </h2>
 
+        <div id="bagItems" class="bag-items"></div>
 
-        <div
-            class="cart-items"
-            id="cartItems"
-        ></div>
+        <div id="bagEmpty" class="bag-empty">
+            <div>♡</div>
+            Your bag is waiting
+            for something cute.
+        </div>
 
+        <div class="bag-total">
 
-        <div
-            class="cart-empty"
-            id="cartEmpty"
+            <span>Total</span>
+
+            <strong>
+                ₹<span id="bagTotal">0</span>
+            </strong>
+
+        </div>
+
+        <a
+            href="https://www.instagram.com/charm_basket04/"
+            target="_blank"
+            class="button button-dark"
         >
-
-            <div>
-                🐹
-            </div>
-
-            <p>
-                Your little bag is empty.
-            </p>
-
-            <span>
-                The hamster is waiting.
-            </span>
-
-        </div>
-
-
-        <div class="cart-footer">
-
-            <div>
-
-                <span>
-                    Items
-                </span>
-
-                <strong id="cartTotal">
-                    ₹0
-                </strong>
-
-            </div>
-
-            <button>
-                Continue to order
-                →
-            </button>
-
-        </div>
+            Continue on Instagram
+            <span>↗</span>
+        </a>
 
     </aside>
 
 </div>
-
-
-<!-- CART OPEN BUTTON -->
-
-<button
-    class="floating-cart"
-    id="floatingCart"
->
-
-    <span>
-        Bag
-    </span>
-
-    <strong id="cartCount">
-        0
-    </strong>
-
-</button>
 
 
 <script src="script.js"></script>
